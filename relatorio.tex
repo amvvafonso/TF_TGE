@@ -1,0 +1,240 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, total={17cm, 23cm}]{geometry}
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{lmodern} % for bold teletype font
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{glossaries}
+\usepackage[portuguese]{babel}
+
+% ----------- CONFIGURAÇÕES PACKAGES ----------- %
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,     
+    linkbordercolor = {white},
+}
+
+\definecolor{codeBlue}{rgb}{0.2,0.2,1}
+\definecolor{codeGreen}{rgb}{0,0.5,0}
+\definecolor{codeRed}{rgb}{0.9,0,0}
+\definecolor{CodeGrey}{rgb}{0.46,0.45,0.48}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+
+
+%Graphic path
+\graphicspath{ {Resourcers} }
+
+
+% ----------- CONFIGURAÇÕES PACKAGES ----------- %
+
+
+% ----------- CONFIGURAÇÕES VARIAVEIS ----------- %
+
+\def\logoEscola{logoIpt.png} %Logo da Escola 
+\def\local{Local} %Local
+\def\curso{Engenharia Informática} %Curso
+\def\escola{Instituto Politécnico de Tomar} %Escola
+\def\autor{Afonso Viana, André Luis, Igor Fonseca, Filipe Simões} %Autor relatório
+\def\titulo{Selfpowered} %Título do documento
+
+%Estagio
+\def\localEstagio{Local estagio (Opcional)} %Local do estágio
+\def\instEstagio{Instituto do estagio (Opcional)} %Instituição do estágio
+
+
+
+% ----------- FIM CONFIGURAÇÕES VARIAVEIS ----------- %
+
+
+
+% Configuração do título
+\title{\textbf{\titulo}}
+\author{\Large \autor \vspace{0.3cm}}
+
+
+
+
+\begin{document} 
+
+% ---------- FUNÇÕES --------- %
+
+\newcommand{\forceIndent}{\hspace{\parindent}}
+
+
+
+
+% ---------- FIM FUNÇÕES --------- %
+
+
+% ----------- CAPA RELATORIO----------- %
+
+%Título documento
+\maketitle
+
+%LOGO no canto superior esquerdo
+\begin{tikzpicture}[remember picture,overlay]
+	\node[anchor=north west,yshift=-1.5pt,xshift=1pt]%
+at (current page.north west)
+	{\includegraphics[scale=0.5]{\logoEscola}};
+\end{tikzpicture}
+
+
+
+\vspace{6cm}
+\par
+\large\centering \curso
+\vspace{2mm}
+\par
+\normalsize \escola
+
+\pagenumbering{gobble}
+
+
+
+% ---- Opcional, informações de estágio ---- %
+
+%\newpage
+%\begin{tikzpicture}[remember picture,overlay]
+%	\node[anchor=north west,yshift=-1.5pt,xshift=1pt]%
+%	at (current page.north west)
+%	{\includegraphics[scale=0.5]{\logoEscola}};
+% \end{tikzpicture}
+
+
+%Local estágio caso necessário
+%\vspace{2cm}
+%\Large\textbf{\localEstagio} \par 
+%\large \instEstagio
+
+% ---- Opcional, informações de estágio ---- %
+
+
+
+% ------------------ FIM CAPA RELATORIO----------------- %
+
+
+
+
+
+
+
+% ---- Opcional, contextualização de documento ---- %
+
+%\newpage
+
+%\raggedleft\small\emph{Relatório de estágio apresentado no Instituto Politécnico de Tomar}
+%\par
+%\raggedleft\small\emph{para cumprimento dos requisitos necessários à obtenção do grau}
+%\par
+%\small\emph{Pós-secundário em Informática}
+
+% ---- Fim Contextualização de documento ---- %
+
+
+
+
+
+
+
+
+% ----------- DESENVOLVIMENTO RELATORIO----------- %
+
+
+% -- CONFIGURAÇÕES CONTEÚDO -- %
+
+%gerais
+\raggedright
+\setlength\parindent{24pt}
+\renewcommand{\baselinestretch}{1.2} 
+
+% Indice
+\newpage
+\tableofcontents
+
+\newpage
+\renewcommand{\listfigurename}{\raggedright Lista de figuras}
+\listoffigures
+
+% -- FIM CONFIGURAÇÕES CONTEÚDO -- %
+
+
+
+
+% -- CONTEÚDO -- %
+
+% Introdução
+\newpage
+\section{\raggedright Sumário Executivo}
+\forceIndent 
+
+
+
+
+% Desenvolvimento teórico
+\newpage
+
+\section{\raggedright Apresentação do Negócio}
+
+\subsection{\raggedright Descrição de Oportunidade}
+
+\subsection{\raggedright História da Empresa}
+
+\subsection{\raggedright Missão}
+
+\subsection{\raggedright Visão}
+
+\subsection{\raggedright Valores}
+
+\subsection{\raggedright Objetivos}
+
+\subsection{\raggedright Vantagem Competitiva}
+
+\subsection{\raggedright Modelo de Negócio}
+
+\section{\raggedright Equipa Fundadora e de Gestão}
+
+\section{\raggedright A Estrutura da Empresa}
+
+\subsection{\raggedright Forma Jurídica}
+
+\subsection{\raggedright nome ou Denominação Social}
+
+\subsection{\raggedright CAE}
+
+\subsection{\raggedright Contactos}
+
+\subsection{\raggedright Página da Internet}
+
+\section{\raggedright Análise do Meio, da Indústria e do Setor}
+
+\subsection{\raggedright Análise da tendência do setor }
+
+
+
+
+
+
+% -- FIM TEORIA -- %
+
+
+\newpage
+
+\section{Conclusão}
+    \forceIndent Dolore aliqua consequat magna enim ad. Incididunt excepteur aliqua nostrud sunt est aute exercitation elit est deserunt laborum. Minim et eiusmod et sint.
+
+Deserunt commodo deserunt anim veniam excepteur enim eu quis. Minim ipsum proident ex aliquip sint. Cillum nisi proident nostrud qui consequat cillum. Irure fugiat nisi officia eiusmod aliquip eu nisi ullamco cillum Lorem elit amet.
+
+
+
+
+
+\end{document}
+
+
